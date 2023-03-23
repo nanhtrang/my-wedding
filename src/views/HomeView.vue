@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home-container">
     <div ref="boxcircles" class="box-loading"></div>
     <div class="header-vue">
       <header-vue></header-vue>
@@ -7,6 +7,7 @@
     </div>
     <banner-vue></banner-vue>
     <calendar-vue></calendar-vue>
+    <bride-and-groom-vue></bride-and-groom-vue>
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import HeaderVue from '@/components/Header.vue'
 import NavbarCustomVue from '@/components/NavbarCustom.vue'
 import BannerHeaderVue from '@/components/BannerHeader.vue'
 import CalendarVue from '@/components/Calendar.vue'
+import BrideAndGroomVue from '@/components/BrideAndGroom.vue'
 // @ is an alias to /src
 
 export default {
@@ -23,7 +25,8 @@ export default {
     'header-vue': HeaderVue,
     'navbar-vue': NavbarCustomVue,
     'banner-vue': BannerHeaderVue,
-    'calendar-vue': CalendarVue
+    'calendar-vue': CalendarVue,
+    'bride-and-groom-vue': BrideAndGroomVue
   },
   data: function () {
     return {
@@ -49,3 +52,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.home-container {
+  padding-bottom: 80px;
+}
+</style>
