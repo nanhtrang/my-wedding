@@ -1,7 +1,7 @@
 <template>
   <div class="container-bandg container px-5 pt-5">
     <div class="img-title"></div>
-    <div class="title-bg font-dancing-script">
+    <div id="bandg" class="title-bg font-dancing-script">
       Cô đâu & Chú rể
     </div>
     <div class="quote mb-5 mt-2">
@@ -11,12 +11,12 @@
       <div class="col-sm-6 m-0 p-0 bg-bg"></div>
       <div class="col-sm-6 m-0 p-0">
         <div class="box-info p-5">
-          <div class="name-info font-dancing-script">Trần Đức Toàn</div>
+          <div class="name-info font-dancing-script">Đức Toàn</div>
         </div>
       </div>
       <div class="col-sm-6 m-0 p-0">
         <div class="box-info p-5">
-          <div class="name-info font-dancing-script">Nguyễn Như Ngọc</div>
+          <div class="name-info font-dancing-script">Như Ngọc</div>
         </div>
       </div>
       <div class="col-sm-6 m-0 p-0 bg-bg"></div>
@@ -45,9 +45,6 @@ export default {
 </script>
 
 <style scoped>
-.title-bg {
-  font-size: 40px;
-}
 .name-info {
   font-size: 40px;
 }

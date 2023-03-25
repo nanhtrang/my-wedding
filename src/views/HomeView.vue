@@ -8,6 +8,7 @@
     <banner-vue></banner-vue>
     <calendar-vue></calendar-vue>
     <bride-and-groom-vue></bride-and-groom-vue>
+    <event-vue></event-vue>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import NavbarCustomVue from '@/components/NavbarCustom.vue'
 import BannerHeaderVue from '@/components/BannerHeader.vue'
 import CalendarVue from '@/components/Calendar.vue'
 import BrideAndGroomVue from '@/components/BrideAndGroom.vue'
+import EventVue from '@/components/Event.vue'
 // @ is an alias to /src
 
 export default {
@@ -26,7 +28,8 @@ export default {
     'navbar-vue': NavbarCustomVue,
     'banner-vue': BannerHeaderVue,
     'calendar-vue': CalendarVue,
-    'bride-and-groom-vue': BrideAndGroomVue
+    'bride-and-groom-vue': BrideAndGroomVue,
+    'event-vue': EventVue
   },
   data: function () {
     return {
@@ -55,5 +58,7 @@ export default {
 <style scoped>
 .home-container {
   padding-bottom: 80px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 </style>

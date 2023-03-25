@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Great+Vibes&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Dancing+Script:wght@400;500&family=Great+Vibes&family=Varela+Round&display=swap');
 
 .font-dancing-script {
   font-family: "Dancing Script", cursive !important;
   color: #202a41;
   text-decoration: none;
+}
+* {
+  font-family: 'Varela Round', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .img-title {
@@ -11,6 +17,10 @@
   height: 70px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.title-bg {
+  font-size: 40px;
 }
 
 .menu-font {

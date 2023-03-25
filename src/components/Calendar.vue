@@ -17,7 +17,7 @@
                 Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng tôi
                 có thêm một niềm hạnh phúc!
               </div>
-              <div>c
+              <div>
                 <button class="button-82-pushable" role="button">
                   <span class="button-82-shadow"></span>
                   <span class="button-82-edge"></span>
