@@ -8,17 +8,19 @@
     <banner-vue></banner-vue>
     <calendar-vue></calendar-vue>
     <bride-and-groom-vue></bride-and-groom-vue>
+    <image-album></image-album>
     <event-vue></event-vue>
   </div>
 </template>
 
 <script>
-import HeaderVue from '@/components/Header.vue'
-import NavbarCustomVue from '@/components/NavbarCustom.vue'
-import BannerHeaderVue from '@/components/BannerHeader.vue'
-import CalendarVue from '@/components/Calendar.vue'
-import BrideAndGroomVue from '@/components/BrideAndGroom.vue'
-import EventVue from '@/components/Event.vue'
+import HeaderVue from '@/components/HeaderJustMarried/Header.vue'
+import NavbarCustomVue from '@/components/HeaderJustMarried/NavbarCustom.vue'
+import BannerHeaderVue from '@/components/AlbumBanner/BannerHeader.vue'
+import CalendarVue from '@/components/Calendar/Calendar.vue'
+import BrideAndGroomVue from '@/components/BandG/BrideAndGroom.vue'
+import EventVue from '@/components/Event/Event.vue'
+import ImageAlbum from '@/components/Album/ImageAlbum.vue'
 // @ is an alias to /src
 
 export default {
@@ -29,7 +31,8 @@ export default {
     'banner-vue': BannerHeaderVue,
     'calendar-vue': CalendarVue,
     'bride-and-groom-vue': BrideAndGroomVue,
-    'event-vue': EventVue
+    'event-vue': EventVue,
+    'image-album': ImageAlbum
   },
   data: function () {
     return {
@@ -58,7 +61,7 @@ export default {
 <style scoped>
 .home-container {
   padding-bottom: 80px;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 </style>

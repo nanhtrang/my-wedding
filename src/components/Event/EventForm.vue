@@ -3,11 +3,11 @@
     <div class="event-form-title">
       {{title}}
     </div>
-    <div class="form-container pb-3">
+    <div class="form-container1 pb-3">
       <img class="img" :src="img" width="230" height="230">
       <div class="event-time">{{time}}</div>
       <div class="event-location">{{location}}</div>
-      <button class="button-82-pushable" role="button">
+      <button class="button-82-pushable" role="button" @click="gotoMap">
         <span class="button-82-shadow"></span>
         <span class="button-82-edge"></span>
         <span class="button-82-front text">
@@ -25,7 +25,8 @@ export default {
     title: null,
     time: null,
     location: null,
-    img: null
+    img: null,
+    link: null
   },
   data () {
     return {
@@ -38,7 +39,9 @@ export default {
   },
 
   methods: {
-
+    gotoMap: function () {
+      window.open(this.link)
+    }
   }
 }
 </script>
@@ -48,11 +51,10 @@ export default {
   background-image: url('../../assets/images/bg/bg.png');
   box-shadow: rgba(178, 201, 211, 0.18) 0px 4px 13.65px 7.35px;
 }
-.event-form-title {
+/* .event-form-title {
   text-transform: uppercase;
   color: #c89d9c;
   font-size: 25px;
-  /* font-family: Arial, Helvetica, sans-serif */
   padding: 15px;
   position: relative;
 }
@@ -86,5 +88,5 @@ export default {
   color: #444;
   margin-block: 10px;
   font-size: 20px;
-}
+} */
 </style>

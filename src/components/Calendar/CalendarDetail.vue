@@ -17,12 +17,14 @@
         <div v-for="(week, index) in dateOfMonth" :key="index" class="week">
           <div v-for="(date, idex) in week" :key="idex" class="date-of-week d-flex justify-content-center">
             <template v-if="date === 25">
-              <div class="active-date">
+              <div class="active-date" data-aos="zoom-out-left" data-aos-duration="1500">
                 25
               </div>
             </template>
             <template v-else>
-              {{date}}
+              <div data-aos="zoom-out-left" data-aos-duration="1500">
+                {{date}}
+              </div>
             </template>
           </div>
         </div>
@@ -30,19 +32,19 @@
 
       <div class="countdown-box">
         <div id="demo" class="d-flex justify-content-center align-items-center pt-3 w-100">
-          <div class="timer">
+          <div class="timer" data-aos="zoom-out-up" data-aos-duration="1000">
             <div>{{date}}</div>
             <div>Ngày</div>
           </div>
-          <div class="timer">
+          <div class="timer" data-aos="zoom-out-up" data-aos-duration="1200">
             <div>{{hour}}</div>
             <div>Giờ</div>
           </div>
-          <div class="timer">
+          <div class="timer" data-aos="zoom-out-up" data-aos-duration="1400">
             <div>{{min}}</div>
             <div>Phút</div>
           </div>
-          <div class="timer">
+          <div class="timer" data-aos="zoom-out-up" data-aos-duration="1600">
             <div>{{sec}}</div>
             <div>Giây</div>
           </div>
