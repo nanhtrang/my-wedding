@@ -10,6 +10,7 @@
     <bride-and-groom-vue></bride-and-groom-vue>
     <image-album></image-album>
     <event-vue></event-vue>
+    <bride-and-groom-vue></bride-and-groom-vue>
   </div>
 </template>
 

@@ -6,10 +6,10 @@
     ></header-title>
     <ul>
       <!-- <li v-for="n in 12" :key="n">{{ `../../assets/images/album/${n}.png` }}</li> -->
-      <img v-for="n in 12" :key="n" :src="`../../assets/images/album/${n}.png`" alt="">
+      <!-- <img v-for="n in 12" :key="n" :src="`../../assets/images/album/${n}.png`" alt=""> -->
     </ul>
     <div class="image-container">
-      <div class="img" v-for="(item, index) in albums" :key="index" data-aos="flip-up">
+      <div class="img" v-for="(item, index) in albums" :id="`flip-up-${item.name}`" :key="index" data-aos="flip-up">
         <img :src="item.path" alt="">
       </div>
     </div>
@@ -37,8 +37,15 @@ export default {
     importAll: function (r) {
       const vm = this
       r.keys().forEach(key => {
-        vm.albums.push({ path: r(key), name: key })
+        const time = this.getRandomIntInclusive(3000, 5000)
+        const item = { path: r(key), name: key.replace('./', ''), time, isRotate: false }
+        vm.albums.push(item)
       })
+    },
+    getRandomIntInclusive: function (min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min + 1) + min) // The maximum is inclusive and the minimum is inclusive
     }
   }
 }
@@ -56,11 +63,12 @@ export default {
   border-radius: 5px;
   box-shadow: 0 5px 10px rgb(163, 162, 162);
   overflow: hidden;
-  transition: all ease 0.5s;
+  transition: all ease 1s;
+  transform-style: preserve-3d;
 }
 
-.image-container .img:hover {
-  transform: scale(1.5);
+.img:hover img{
+  transform: rotateY(180deg);
   box-shadow: unset;
   z-index: 15;
 }

@@ -1,7 +1,11 @@
 <template>
-  <div class="calendar-container mt-5 py-5">
+  <div class="calendar-container mt-5 pb-5">
     <div class="bg-side bg-left"></div>
     <div class="bg-side bg-right"></div>
+    <header-title
+      title="Thời gian"
+      subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam soluta beatae libero similique eius neque aliquid magni dignissimos fugiat assumenda veritatis sit, quia hic sunt quas optio iure quod voluptatum?"
+    ></header-title>
     <div class="container">
       <div class="row m-0 p-0">
 
@@ -39,12 +43,14 @@
 
 <script>
 import Button82 from '../Common/Button82.vue'
+import HeaderTitle from '../Common/HeaderTitle.vue'
 import CalendarDetailVue from './CalendarDetail.vue'
 export default {
   name: 'ToanNgocWeddingCalendar',
   components: {
     'calendar-detail': CalendarDetailVue,
-    Button82
+    Button82,
+    HeaderTitle
   },
   data () {
     return {}
