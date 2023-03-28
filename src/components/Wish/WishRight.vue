@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'ToanNgocWeddingWish',
+  name: 'ToanNgocWeddingWishRight',
 
   data () {
     return {

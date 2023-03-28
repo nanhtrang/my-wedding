@@ -10,7 +10,7 @@
     <bride-and-groom-vue></bride-and-groom-vue>
     <image-album></image-album>
     <event-vue></event-vue>
-    <bride-and-groom-vue></bride-and-groom-vue>
+    <wish-vue></wish-vue>
   </div>
 </template>
 
@@ -22,7 +22,7 @@ import CalendarVue from '@/components/Calendar/Calendar.vue'
 import BrideAndGroomVue from '@/components/BandG/BrideAndGroom.vue'
 import EventVue from '@/components/Event/Event.vue'
 import ImageAlbum from '@/components/Album/ImageAlbum.vue'
-// @ is an alias to /src
+import WishVue from '@/components/Wish/Wish.vue'
 
 export default {
   name: 'HomeView',
@@ -33,7 +33,8 @@ export default {
     'calendar-vue': CalendarVue,
     'bride-and-groom-vue': BrideAndGroomVue,
     'event-vue': EventVue,
-    'image-album': ImageAlbum
+    'image-album': ImageAlbum,
+    'wish-vue': WishVue
   },
   data: function () {
     return {

@@ -12,6 +12,7 @@
   text-align: center;
   color: #2c3e50;
   overflow: auto;
+  background-color: #f2eded;
 }
 
 nav {

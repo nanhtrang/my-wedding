@@ -23,7 +23,7 @@
                 có thêm một niềm hạnh phúc!
               </div>
               <div data-aos="zoom-out" data-aos-duration="2000">
-                <button-82>Gửi lời chúc</button-82>
+                <button-82 @onClick="send">Gửi lời chúc</button-82>
               </div>
             </div>
           </div>
@@ -58,7 +58,11 @@ export default {
 
   mounted () {},
 
-  methods: {}
+  methods: {
+    send: function () {
+      document.getElementById('happy').scrollIntoView()
+    }
+  }
 }
 </script>
 

@@ -4,7 +4,7 @@
     <div data-aos="flip-up" data-aos-duration="1000" id="bandg" class="title-bg font-dancing-script">
       {{title}}
     </div>
-    <div data-aos="flip-up" data-aos-duration="1300" class="quote mb-5 mt-2">
+    <div data-aos="flip-up" data-aos-duration="1300" class="quote mb-5 mt-2 container">
       {{subTitle}}
     </div>
   </div>

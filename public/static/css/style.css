@@ -12,6 +12,9 @@ html {
   scroll-behavior: smooth;
 }
 
+#app {
+}
+
 .img-title {
   background-image: url('../../static/imgs/sec-title-flower.png');
   height: 70px;
