@@ -4,7 +4,6 @@
     <div class="row container m-auto m-0 p-0 info">
       <event-form
         :link="map.boy"
-        :img="imgs[0].path"
         :time="`11:30 AM 10/02/2023`"
         :location="`Tư gia nhà trai`"
         :isLeft="true"
@@ -13,7 +12,6 @@
       <event-form
         :isLeft="false"
         :link="map.girl"
-        :img="imgs[1].path"
         :time="`11:30 AM 10/02/2023`"
         :location="`Tư gia nhà trai`"
         >Lễ cưới nhà gái</event-form

@@ -4,23 +4,48 @@
     class="gallery js-flickity"
     data-flickity-options='{ "wrapAround": true }'
   >
-    <div class="gallery-cell" ></div>
-    <div class="gallery-cell" ></div>
-    <div class="gallery-cell" ></div>
+    <div class="gallery-cell" v-for="(item, index) in imgs" :key="index">
+      <img :src="item.path">
+    </div>
+<!--    <div class="gallery-cell" ></div>-->
+<!--    <div class="gallery-cell" ></div>-->
   </div>
 </template>
 
 <script>
+import apiPath from '@/common/apiPath'
+import http from '@/common/http'
+
 export default {
   name: 'ToanNgocWeddingBannerHeader',
 
   data () {
-    return {}
+    return {
+      imgs: []
+    }
   },
 
-  mounted () {},
+  mounted () {
+    this.loadImg(require.context('../../assets/images/banner', true, /\.jpeg/))
+  },
 
-  methods: {}
+  methods: {
+    loadImg: function (r) {
+      const vm = this
+      r.keys().forEach(key => {
+        const item = { path: r(key), name: key.replace('./', '') }
+        vm.imgs.push(item)
+      })
+    },
+    getImage: function () {
+      const vm = this
+      http.GET(apiPath.nav, (res) => {
+        vm.imgs = res
+      }, (err) => {
+        console.log(err)
+      })
+    }
+  }
 }
 </script>
 
@@ -30,7 +55,7 @@ export default {
   box-sizing: border-box;
 }
 .gallery-cell:nth-child(1) {
-  background-image: url('../../assets/images/banner/1.jpeg');
+  /*background-image: url('../../assets/images/banner/1.jpeg');*/
   background-position: 0 20%;
 }
 
@@ -42,6 +67,15 @@ export default {
 .gallery-cell:nth-child(3) {
   background-image: url('../../assets/images/banner/3.jpeg');
   background-position: 0 50%;
+}
+
+.gallery-cell img {
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 .gallery-cell {

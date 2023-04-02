@@ -42,20 +42,39 @@ export default {
     }
   },
   mounted: function () {
-    // this.openLoading()
+    console.log(process.env.VUE_APP_HOST)
+    this.openLoading()
   },
   methods: {
     openLoading () {
-      const loading = this.$vs.loading({
-        type: 'scale',
-        background: '#ffe6ff',
-        color: '#202a41'
+      document.addEventListener('DOMContentLoaded', function () {
+        const lazyloadImages = document.querySelectorAll('img.lazy')
+        let lazyloadThrottleTimeout
+        function lazyload () {
+          if (lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout)
+          }
+
+          lazyloadThrottleTimeout = setTimeout(function () {
+            const scrollTop = window.pageYOffset
+            lazyloadImages.forEach(function (img) {
+              if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                img.src = img.dataset.src
+                img.classList.remove('lazy')
+              }
+            })
+            if (lazyloadImages.length === 0) {
+              document.removeEventListener('scroll', lazyload)
+              window.removeEventListener('resize', lazyload)
+              window.removeEventListener('orientationChange', lazyload)
+            }
+          }, 50)
+        }
+
+        document.addEventListener('scroll', lazyload)
+        window.addEventListener('resize', lazyload)
+        window.addEventListener('orientationChange', lazyload)
       })
-      this.hasOpenLoading = true
-      setTimeout(() => {
-        loading.close()
-        this.hasOpenLoading = false
-      }, 1500)
     }
   }
 }

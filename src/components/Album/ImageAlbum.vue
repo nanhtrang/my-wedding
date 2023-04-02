@@ -10,7 +10,7 @@
     </ul>
     <div class="image-container">
       <div class="img" v-for="(item, index) in albums" :id="`flip-up-${item.name}`" :key="index" data-aos="flip-up">
-        <img :src="item.path" alt="">
+        <img class="lazy" :data-src="item.path" alt="">
       </div>
     </div>
   </div>
