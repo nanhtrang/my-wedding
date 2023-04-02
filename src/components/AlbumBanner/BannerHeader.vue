@@ -5,7 +5,9 @@
     data-flickity-options='{ "wrapAround": true }'
   >
     <div class="gallery-cell" v-for="(item, index) in imgs" :key="index">
-      <img :src="item.path">
+      <img :class="`${index !== 0 && index !== 1 && index !== imgs.length - 1 ? 'lazy' : ''}`"
+           :src="`${index === 0 || index === 1 || index === imgs.length - 1 ? item.path : ''}`"
+           :data-src="item.path">
     </div>
 <!--    <div class="gallery-cell" ></div>-->
 <!--    <div class="gallery-cell" ></div>-->
@@ -54,20 +56,20 @@ export default {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.gallery-cell:nth-child(1) {
-  /*background-image: url('../../assets/images/banner/1.jpeg');*/
-  background-position: 0 20%;
-}
+/*.gallery-cell:nth-child(1) {*/
+/*  background-image: url('../../assets/images/banner/1.jpeg');*/
+/*  background-position: 0 20%;*/
+/*}*/
 
-.gallery-cell:nth-child(2) {
-  background-image: url('../../assets/images/banner/2.jpeg');
-  background-position: 0 20%;
-}
+/*.gallery-cell:nth-child(2) {*/
+/*  background-image: url('../../assets/images/banner/2.jpeg');*/
+/*  background-position: 0 20%;*/
+/*}*/
 
-.gallery-cell:nth-child(3) {
-  background-image: url('../../assets/images/banner/3.jpeg');
-  background-position: 0 50%;
-}
+/*.gallery-cell:nth-child(3) {*/
+/*  background-image: url('../../assets/images/banner/3.jpeg');*/
+/*  background-position: 0 50%;*/
+/*}*/
 
 .gallery-cell img {
   object-fit: cover;
