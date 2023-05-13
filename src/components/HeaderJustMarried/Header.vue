@@ -1,10 +1,10 @@
 <template>
-  <div class="header-container p-5 border-bottom">
-    <div class="font-dancing-script" data-aos="zoom-out" data-aos-duration="1000">
+  <div id="header-container" class="header-container py-5 px-3 border-bottom">
+    <div class="font-dancing-script animation-fade-in-up delay-05">
       Đức Toàn <span class="material-symbols-outlined icon-heart"> favorite </span> Như
       Ngọc
     </div>
-    <div data-aos="zoom-out" data-aos-duration="1400">
+    <div class="animation-fade-in-up delay-06">
       <span class="just-married">Just Married</span>
     </div>
   </div>
@@ -30,6 +30,7 @@ export default {
   font-size: 35px;
 }
 .header-container {
+  transition: 0.5s all ease;
 }
 
 .just-married {

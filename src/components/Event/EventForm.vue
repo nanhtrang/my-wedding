@@ -1,11 +1,12 @@
 <template>
-  <div :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1000" :class="`col-sm-6 m-0 p-0 px-3 d-flex my-2 ${isLeft ? 'justify-content-end' : ''}`">
+  <div :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1000"
+       :class="`col-sm-6 m-0 p-0 px-3 d-flex my-2 animation-box ${isLeft ? 'justify-content-end animation-box-secondary' : ''}`">
     <div class="event-form-container rounded">
       <div class="event-form-title" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1300">
         <slot></slot>
       </div>
       <div class="form-container1 pb-3">
-        <img class="img" :src="img" width="230" height="230" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1500" />
+        <img class="img lazy" :data-src="img" width="230" height="230" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1500" />
         <div class="event-time" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1700">{{ time }}</div>
         <div class="event-location" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1900">{{ location }}</div>
         <button-82 @onClick="gotoMap()" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="2100">Xem bản đồ</button-82>

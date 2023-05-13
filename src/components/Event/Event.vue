@@ -1,11 +1,12 @@
 <template>
-  <div id="event" class="event-container">
-    <div class="bg-img w-100"></div>
+  <div id="event" class="event-container border-bottom">
+    <div class="bg-img w-100 animation-box animation-box-secondary"></div>
     <div class="row container m-auto m-0 p-0 info">
       <event-form
         :link="map.boy"
         :time="`11:30 AM 10/02/2023`"
         :location="`Tư gia nhà trai`"
+        :img="imgs[0] && imgs[0].path"
         :isLeft="true"
         >Lễ cưới nhà trai</event-form
       >
@@ -14,6 +15,7 @@
         :link="map.girl"
         :time="`11:30 AM 10/02/2023`"
         :location="`Tư gia nhà trai`"
+        :img="imgs[0] && imgs[1].path"
         >Lễ cưới nhà gái</event-form
       >
     </div>
@@ -57,7 +59,7 @@ export default {
 <style scoped>
 .event-container {
   min-height: 100vh;
-  background-color: #f2eded;
+  background-color: #e8cfcf;
   position: relative;
 }
 .bg-img {

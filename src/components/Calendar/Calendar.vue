@@ -1,5 +1,5 @@
 <template>
-  <div class="calendar-container mt-5 pb-5">
+  <div id="calendar" class="calendar-container mt-5 pb-5 border-bottom">
     <div class="bg-side bg-left"></div>
     <div class="bg-side bg-right"></div>
     <header-title
@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row m-0 p-0">
 
-        <div data-aos="fade-right" data-aos-duration="1000" class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12 animation-box animation-box-secondary">
           <div class="box-container h-100">
             <div class="box h-100">
               <h2 class="title my-2" data-aos="zoom-out" data-aos-duration="1400">Save the Date</h2>
@@ -22,14 +22,14 @@
                 Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng tôi
                 có thêm một niềm hạnh phúc!
               </div>
-              <div data-aos="zoom-out" data-aos-duration="2000">
+              <div class="animation-box animation-box-secondary">
                 <button-82 @onClick="send">Gửi lời chúc</button-82>
               </div>
             </div>
           </div>
         </div>
 
-        <div data-aos="fade-left" data-aos-duration="1000" class="col-md-6 col-sm-12">
+        <div  class="col-md-6 col-sm-12 animation-box delay-15">
           <div class="box-container">
             <div class="box">
               <calendar-detail></calendar-detail>

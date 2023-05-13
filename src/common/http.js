@@ -1,4 +1,6 @@
 import Library from 'axios'
+import Store from '../store/index'
+import actionTypes from '@/store/types/actionTypes'
 
 const http = Library.create({
   baseURL: process.env.VUE_APP_HOST
@@ -66,6 +68,9 @@ function GET_PARAM (url, param, successCallBack, errorCallBack) {
 }
 
 function POST (url, body, successCallBack, errorCallBack, showToast, loading) {
+  if (loading) {
+    Store.dispatch(actionTypes.LOADING, true).then(() => {})
+  }
   http.post(url, body, {
     headers: configHeaderApi()
   })
@@ -73,6 +78,9 @@ function POST (url, body, successCallBack, errorCallBack, showToast, loading) {
       if (typeof successCallBack === 'function') {
         successCallBack(rawResponse.data)
       }
+      setTimeout(() => {
+        closeLoading()
+      }, 500)
     })
     .catch(error => {
       if (typeof errorCallBack === 'function') {
@@ -81,7 +89,7 @@ function POST (url, body, successCallBack, errorCallBack, showToast, loading) {
     })
 }
 
-function DELETE (url, body, successCallBack, errorCallBack) {
+function DELETE (url, body, successCallBack, errorCallBack, showToast, loading) {
   http.delete(url, {
     headers: configHeaderApi(),
     data: body
@@ -112,11 +120,10 @@ function DELETE (url, body, successCallBack, errorCallBack) {
 //   }
 // }
 //
-// function closeLoading () {
-//   if (Store.getters.getLoading) {
-//     Store.dispatch(ACTION.UPDATE_LOADING, false).then(res => {
-//     })
-//   }
-// }
+function closeLoading () {
+  if (Store.getters.getLoading) {
+    Store.dispatch(actionTypes.LOADING, false).then(res => {})
+  }
+}
 
 export default { GET, POST, DELETE, GET_NO_HEADER, GET_PARAM }

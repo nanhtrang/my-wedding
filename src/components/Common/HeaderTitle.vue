@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div data-aos="flip-up" class="img-title mt-5"></div>
-    <div data-aos="flip-up" data-aos-duration="1000" id="bandg" class="title-bg font-dancing-script">
+    <div class="img-title mt-5  animation-box"></div>
+    <div data-aos-duration="1000" class="title-bg font-dancing-script animation-box animation-box-secondary">
       {{title}}
     </div>
-    <div data-aos="flip-up" data-aos-duration="1300" class="quote mb-5 mt-2 container">
+    <div data-aos-duration="1300" class="quote mb-5 mt-2 container animation-box">
       {{subTitle}}
     </div>
   </div>

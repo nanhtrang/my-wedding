@@ -1,12 +1,33 @@
 <template>
-  <div class="d-flex justify-content-center border-bottom menu-font">
-    <a href="#bandg" class="px-3 py-2 c-pointer nav-item"><div data-aos="zoom-in-left" data-aos-duration="1500">Cặp đôi</div></a>
-    <a href="#" class="px-3 py-2 c-pointer nav-item"><div data-aos="zoom-in-left" data-aos-duration="1700">Chuyện tình yêu</div></a>
-    <a href="#album" class="px-3 py-2 c-pointer nav-item"><div data-aos="zoom-in-left" data-aos-duration="1900">Album ảnh</div></a>
-    <a href="#event" class="px-3 py-2 c-pointer nav-item"><div data-aos="zoom-in-left" data-aos-duration="2100">Sự kiện</div></a>
-    <a href="#happy" class="px-3 py-2 c-pointer nav-item"><div data-aos="zoom-in-left" data-aos-duration="2300">Lời chúc</div></a>
-    <a href="#" class="px-3 py-2 c-pointer nav-item"><div data-aos="zoom-in-left" data-aos-duration="2500">Mừng cưới</div></a>
+  <div>
+    <div id="menu-bar" class="d-flex justify-content-center border-bottom menu-font animation-fade-in-right delay-10" style="background-color: #e8cfcf">
+      <a href="#calendar" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-10">Thời gian</div></a>
+      <a href="#bandg" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-10">Cặp đôi</div></a>
+      <a href="#album" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-12">Album ảnh</div></a>
+      <a href="#event" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-13">Sự kiện</div></a>
+      <a href="#happy" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-14">Lời chúc</div></a>
+      <a href="javascript:;" @click="sendMoney" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-15">Mừng cưới</div></a>
+    </div>
+    <div id="menu-bar-fixed" class="d-none">
+      <div class="menu-bar-fixed-container d-flex justify-content-center border-bottom menu-font animation-fade-in-right delay-10" style="background-color: #e8cfcf">
+        <div class="logo">
+          <a href="#" style="text-decoration: none">
+            <div class="font-dancing-script animation-fade-in-up delay-05 d-flex justify-content-center align-items-center text-secondary">
+                T <span class="material-symbols-outlined icon-heart"> favorite </span> N
+            </div>
+          </a>
+        </div>
+        <a href="#calendar" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-10">Thời gian</div></a>
+        <a href="#bandg" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-10">Cặp đôi</div></a>
+        <a href="#album" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-12">Album ảnh</div></a>
+        <a href="#event" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-13">Sự kiện</div></a>
+        <a href="#happy" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-14">Lời chúc</div></a>
+        <a href="javascript:;" @click="sendMoney" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-15">Mừng cưới</div></a>
+      </div>
+    </div>
+
   </div>
+
 </template>
 
 <script>
@@ -22,6 +43,12 @@ export default {
   methods: {
     goto: function (id) {
       document.getElementById(id).scrollIntoView()
+    },
+    trigger: function () {
+      // document.getElementById("header-container").style.marginTop = "66px"
+    },
+    sendMoney: function () {
+      this.$emit('sendMoney')
     }
   }
 }
@@ -29,12 +56,22 @@ export default {
 
 <style scoped>
 .nav-item {
-  transition: color ease .3s;
+  transition: all ease .3s;
   font-weight: 500;
   text-decoration: none;
   color: #202a41;
 }
 .nav-item:hover {
-  color: #c89d9c !important;
+  color: #eae7e7 !important;
+  background-color: #c76b87;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.logo {
+  position: absolute;
+  top: -3px;
+  left: 50px;
+  font-size: 30px;
 }
 </style>

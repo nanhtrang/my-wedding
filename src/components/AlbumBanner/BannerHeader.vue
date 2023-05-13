@@ -1,12 +1,11 @@
 <template>
   <div
     data-aos-duration="1300" data-aos="flip-up"
-    class="gallery js-flickity"
+    class="gallery js-flickity animation-fade-in-left delay-12"
     data-flickity-options='{ "wrapAround": true }'
   >
     <div class="gallery-cell" v-for="(item, index) in imgs" :key="index">
-      <img :class="`${index !== 0 && index !== 1 && index !== imgs.length - 1 ? 'lazy' : ''}`"
-           :src="`${index === 0 || index === 1 || index === imgs.length - 1 ? item.path : ''}`"
+      <img :src="item.path"
            :data-src="item.path">
     </div>
 <!--    <div class="gallery-cell" ></div>-->
@@ -37,14 +36,6 @@ export default {
       r.keys().forEach(key => {
         const item = { path: r(key), name: key.replace('./', '') }
         vm.imgs.push(item)
-      })
-    },
-    getImage: function () {
-      const vm = this
-      http.GET(apiPath.nav, (res) => {
-        vm.imgs = res
-      }, (err) => {
-        console.log(err)
       })
     }
   }

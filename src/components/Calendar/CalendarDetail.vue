@@ -16,8 +16,13 @@
       <div class="date-table border-bottom">
         <div v-for="(week, index) in dateOfMonth" :key="index" class="week">
           <div v-for="(date, idex) in week" :key="idex" class="date-of-week d-flex justify-content-center">
-            <template v-if="date === 25">
-              <div class="active-date" data-aos="zoom-out-left" data-aos-duration="1500">
+            <template v-if="date === 24">
+              <div class="active-date">
+                24
+              </div>
+            </template>
+            <template v-else-if="date === 25">
+              <div class="active-date main-date">
                 25
               </div>
             </template>
@@ -30,7 +35,7 @@
         </div>
       </div>
 
-      <div class="countdown-box">
+      <div class="countdown-box animation-box delay-23">
         <div id="demo" class="d-flex justify-content-center align-items-center pt-3 w-100">
           <div class="timer" data-aos="zoom-out-up" data-aos-duration="1000">
             <div>{{date}}</div>
@@ -154,7 +159,8 @@ ul {
 .active-date {
   min-height: 40px;
   min-width: 40px;
-  border: 2px solid #c89d9c;
+  border: 2px solid #e8c4c3;
+  color: #c76b87;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,11 +186,23 @@ ul {
 
 }
 
-.active-date:hover::before {
-  content: "25";
-  min-height: 40px;
-  top: 0px;
-  background-color: #c89d9c;
+/*.active-date:hover::before {*/
+/*  content: "25";*/
+/*  min-height: 40px;*/
+/*  top: 0px;*/
+/*  background-color: #c89d9c;*/
+/*}*/
+
+.main-date {
+  color: white;
+  border-color: #c76b87;
+  background: linear-gradient(
+    to left bottom,
+    hsl(339, 59%, 91%) 0%,
+    hsl(342, 59%, 80%) 8%,
+    hsl(342, 63%, 69%) 92%,
+    hsl(342, 58%, 59%) 100%
+  );
 }
 
 /* CSS */

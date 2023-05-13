@@ -12,7 +12,6 @@
 export default {
   name: 'ConvertBase64',
   mounted () {
-    console.log(process.env.VUE_APP_HOST)
   },
   data: function () {
     return {

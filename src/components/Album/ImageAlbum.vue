@@ -1,5 +1,5 @@
 <template>
-  <div class="image-album-container container px-4 pt-5" id="album">
+  <div class="image-album-container container px-4 pt-5 border-bottom" id="album">
     <header-title
       title="Album ảnh"
       subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam soluta beatae libero similique eius neque aliquid magni dignissimos fugiat assumenda veritatis sit, quia hic sunt quas optio iure quod voluptatum?"
@@ -8,7 +8,7 @@
       <!-- <li v-for="n in 12" :key="n">{{ `../../assets/images/album/${n}.png` }}</li> -->
       <!-- <img v-for="n in 12" :key="n" :src="`../../assets/images/album/${n}.png`" alt=""> -->
     </ul>
-    <div class="image-container">
+    <div class="image-container animation-up">
       <div class="img" v-for="(item, index) in albums" :id="`flip-up-${item.name}`" :key="index" data-aos="flip-up">
         <img class="lazy" :data-src="item.path" alt="">
       </div>
@@ -30,10 +30,15 @@ export default {
   },
 
   mounted () {
-    this.importAll(require.context('../../assets/images/album', true, /\.png/))
+    this.importAll(require.context('../../assets/images/album', true, /\.jpg/))
+    this.addEventShowAlbum()
   },
 
   methods: {
+    addEventShowAlbum : function () {
+      document.getElementById("album").addEventListener('onch', () => {
+      })
+    },
     importAll: function (r) {
       const vm = this
       r.keys().forEach(key => {

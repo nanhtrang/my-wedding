@@ -1,14 +1,14 @@
 <template>
-  <div class="container-bandg container px-5">
+  <div class="container-bandg container px-5 border-bottom" id="bandg">
     <header-title
       title="Cô dâu & Chú rể"
       subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam soluta beatae libero similique eius neque aliquid magni dignissimos fugiat assumenda veritatis sit, quia hic sunt quas optio iure quod voluptatum?"
     ></header-title>
     <div class="row">
-      <div class="col-sm-12 col-md-6 m-0 p-0 bg-bg bg-bg-1" data-aos="fade-right" data-aos-duration="1300">
+      <div class="col-sm-12 col-md-6 m-0 p-0 bg-bg bg-bg-1 animation-box animation-box-secondary">
         <img :data-src="mainChar && mainChar[0] ? mainChar[0].path : null" class="w-100 h-100 lazy">
       </div>
-      <div class="col-sm-12 col-md-6 m-0 p-0">
+      <div class="col-sm-12 col-md-6 m-0 p-0 animation-box ">
         <div class="box-info p-5 h-100" data-aos="fade-left" data-aos-duration="1300">
           <div class="name-info font-dancing-script">Đức Toàn</div>
           <div>
@@ -16,7 +16,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 border-top m-0 p-0" data-aos="fade-right" data-aos-duration="1300">
+      <div class="col-sm-12 col-md-6 border-top m-0 p-0 animation-box animation-box-secondary" data-aos="fade-right" data-aos-duration="1300">
         <div class="box-info p-5 h-100">
           <div class="name-info font-dancing-script">Như Ngọc</div>
           <div>
@@ -24,7 +24,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 m-0 p-0 bg-bg bg-bg-2" data-aos="fade-left" data-aos-duration="1300">
+      <div class="col-sm-12 col-md-6 m-0 p-0 bg-bg bg-bg-2 animation-box" data-aos="fade-left" data-aos-duration="1300">
         <img :data-src="mainChar && mainChar[1] ? mainChar[1].path : null" class="w-100 h-100 lazy">
       </div>
     </div>
