@@ -1,5 +1,5 @@
 <template>
-  <div id="calendar" class="calendar-container mt-5 pb-5 border-bottom">
+  <div id="calendar" class="calendar-container pt-3 pb-5 border-bottom">
     <div class="bg-side bg-left"></div>
     <div class="bg-side bg-right"></div>
     <header-title

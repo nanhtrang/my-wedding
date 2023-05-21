@@ -1,5 +1,5 @@
 <template>
-  <div class="confirm-container py-2 animation-fade-in-up delay-06">
+  <div class="confirm-container py-2 animation-fade-in-up delay-06 border-top">
     <div class="row container m-auto" style="position: relative">
       <a class="goToTop" href="#">
         <i class="fa-solid fa-angles-up"></i>
@@ -34,20 +34,21 @@ export default {
   },
   methods: {
     sendConfirm: function () {
-      let prefix = ''
+      let addition = ''
       if (this.$route.fullPath === 'toan-ngoc') {
-        prefix = '.CR'
+        addition = true
       } else {
-        prefix = '.CD'
+        addition = false
       }
       const body = {
-        name: this.name + prefix,
-        number: this.number
+        name: this.name,
+        number: this.number,
+        addition
       }
       const vm = this
       api.addConfirm(body).then(res => {
         if (res.status === 'success') {
-          vm.$router.push('/than ks')
+          // vm.$router.push('/thanks')
         }
       })
     }

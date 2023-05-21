@@ -8,7 +8,7 @@
         @sendMoney="sendMoney"
       ></navbar-vue>
     </div>
-    <div style="width: 100%; height: 65vh;" class="banner-custom"></div>
+<!--    <div style="width: 100%; height: 65vh;" class="banner-custom"></div>-->
 <!--    <banner-vue></banner-vue>-->
 <!--    <card-slider></card-slider>-->
     <calendar-vue></calendar-vue>

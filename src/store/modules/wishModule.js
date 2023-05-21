@@ -17,7 +17,7 @@ const getters = {
 const actions = {
   [actionTypes.GET_WISH](context) {
     return new Promise((resolve, reject) => {
-      http.GET(url, res => {
+      http.GET(url, {}, res => {
         context.commit(mutationTypes.UPDATE_WISH_MUTATION, res.data)
         resolve(res)
       }, err => {

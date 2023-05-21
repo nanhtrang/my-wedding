@@ -1,8 +1,8 @@
 <template>
   <div class="wish-content-container p-3 border-bottom" :id="`wish-${id}`">
 <!--    <i class="fa-solid fa-x" @click="deleteThis(id)"></i>-->
-    <div class="person-chat text-left font-weight-bold">{{name}}</div>
-    <div class="content-chat text-left">
+    <div class="person-chat text-start fw-bold">{{name}}</div>
+    <div class="content-chat text-start">
       <slot></slot>
     </div>
   </div>

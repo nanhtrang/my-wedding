@@ -34,9 +34,10 @@ function GET_NO_HEADER (url, successCallBack, errorCallBack) {
     })
 }
 
-function GET (url, successCallBack, errorCallBack) {
+function GET (url, params, successCallBack, errorCallBack) {
   http.get(url, {
-    headers: configHeaderApi()
+    headers: configHeaderApi(),
+    params: params
   })
     .then(rawResponse => {
       if (typeof successCallBack === 'function') {
