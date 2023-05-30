@@ -7,6 +7,10 @@
       <navbar-vue
         @sendMoney="sendMoney"
       ></navbar-vue>
+<!--    <slide-show></slide-show>-->
+      <div class="banner-custom" style="min-width: 100vw; min-height: 500px">
+<!--        <img class="w-100 img-banner" style="max-height: 500px; object-fit: cover" src="../../public/static/imgs/new/1.jpg">-->
+      </div>
     </div>
 <!--    <div style="width: 100%; height: 65vh;" class="banner-custom"></div>-->
 <!--    <banner-vue></banner-vue>-->
@@ -14,7 +18,7 @@
     <calendar-vue></calendar-vue>
     <bride-and-groom-vue></bride-and-groom-vue>
     <image-album></image-album>
-    <event-vue></event-vue>
+<!--    <event-vue></event-vue>-->
     <wish-vue></wish-vue>
     <footer-vue></footer-vue>
     <confirm-vue></confirm-vue>
@@ -28,7 +32,7 @@ import NavbarCustomVue from '@/components/HeaderJustMarried/NavbarCustom.vue'
 // import BannerHeaderVue from '@/components/AlbumBanner/BannerHeader.vue'
 import CalendarVue from '@/components/Calendar/Calendar.vue'
 import BrideAndGroomVue from '@/components/BandG/BrideAndGroom.vue'
-import EventVue from '@/components/Event/Event.vue'
+// import EventVue from '@/components/Event/Event.vue'
 import ImageAlbum from '@/components/Album/ImageAlbum.vue'
 import WishVue from '@/components/Wish/Wish.vue'
 import FooterVue from '@/components/Common/Footer'
@@ -36,6 +40,7 @@ import Confirm from '@/components/Common/Confirm'
 import SendMoney from '@/components/Modal/SendMoney'
 import LoadingCustom from '@/components/Common/LoadingCustom'
 import actionTypes from '@/store/types/actionTypes'
+// import SlideShow from '@/components/AlbumBanner/SlideShow'
 // import CardSlider from '@/components/AlbumBanner/CardSlider'
 
 export default {
@@ -49,7 +54,7 @@ export default {
     // 'banner-vue': BannerHeaderVue,
     'calendar-vue': CalendarVue,
     'bride-and-groom-vue': BrideAndGroomVue,
-    'event-vue': EventVue,
+    // 'event-vue': EventVue,
     'image-album': ImageAlbum,
     'wish-vue': WishVue,
     'footer-vue': FooterVue,
@@ -63,7 +68,6 @@ export default {
   mounted: function () {
     this.addEventScrollAnimation()
     this.offLoading()
-
   },
   computed: {
     getLoading () {
@@ -71,7 +75,6 @@ export default {
     }
   },
   updated () {
-    console.log('update')
     this.openLoading()
   },
   methods: {
@@ -91,12 +94,14 @@ export default {
       if (this.$route.fullPath === '' || this.$route.fullPath === '') return
       window.addEventListener("scroll", (e) => {
         let menuBar = document.getElementById("menu-bar-fixed")
-        if (window.scrollY > 300) {
-          menuBar.classList.add('menu-position')
-          menuBar.classList.remove('d-none')
-        } else {
-          menuBar.classList.add('d-none')
-          menuBar.classList.remove('menu-position')
+        if (menuBar != null) {
+          if (window.scrollY > 300) {
+            menuBar.classList.add('menu-position')
+            menuBar.classList.remove('d-none')
+          } else {
+            menuBar.classList.add('d-none')
+            menuBar.classList.remove('menu-position')
+          }
         }
         const trigger = window.innerHeight / 5 * 4
         boxes.forEach(box => {
@@ -119,27 +124,29 @@ export default {
       })
     },
     openLoading () {
-      // document.addEventListener('load', function () {
-      //
-      // })
       console.log("loggingg")
-      const lazyloadImages = document.querySelectorAll('img.lazy')
+      const lazyloadImages = document.getElementsByClassName('lazy')
       let lazyloadThrottleTimeout
       function lazyload () {
-        console.log('========')
-        console.log(lazyloadThrottleTimeout)
         if (lazyloadThrottleTimeout) {
           clearTimeout(lazyloadThrottleTimeout)
         }
-
         lazyloadThrottleTimeout = setTimeout(function () {
           const scrollTop = window.pageYOffset
-          lazyloadImages.forEach(function (img) {
+          console.log(lazyloadImages)
+          for (const img of lazyloadImages) {
             if (img.offsetTop < (window.innerHeight + scrollTop)) {
+              console.log("layzee")
               img.src = img.dataset.src
               img.classList.remove('lazy')
             }
-          })
+          }
+          // lazyloadImages.forEach(function (img) {
+          //   if (img.offsetTop < (window.innerHeight + scrollTop)) {
+          //     img.src = img.dataset.src
+          //     img.classList.remove('lazy')
+          //   }
+          // })
           if (lazyloadImages.length === 0) {
             document.removeEventListener('scroll', lazyload)
             window.removeEventListener('resize', lazyload)
@@ -162,8 +169,10 @@ export default {
   overflow-x: hidden;
 }
 .banner-custom {
-  background-image: url("../assets/images/banner/bg.gif");
+  background-image: url("../assets/images/banner/new/1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 5%;
 }
+
 </style>

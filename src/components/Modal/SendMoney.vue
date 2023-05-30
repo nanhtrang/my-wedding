@@ -14,6 +14,7 @@
             <money-info-box
               :info-banks="boy"
               name="Trần Đức Toàn"
+              gender="boy"
             >
               Mừng cưới chú rể
             </money-info-box>
@@ -22,6 +23,7 @@
             <money-info-box
               :info-banks="girl"
               name="Nguyễn Như Ngọc"
+              gender="girl"
             >
               Mừng cưới cô dâu
             </money-info-box>
@@ -43,30 +45,20 @@ export default {
       boy: [
         {
           number: "19070125033015",
-          code: "TCB"
+          code: "TCB",
+          img: 'TCB'
         },
         {
           number: "00999735402",
-          code: "TPB"
-        },
-        {
-          number: "104875485467",
-          code: "ICB"
+          code: "TPB",
+          img: 'TPB'
         }],
       girl: [
         {
           number: "19035087650013",
-          code: "TCB"
-        },
-        {
-          number: "00999735402",
-          code: "TPB"
-        },
-        {
-          number: "638121197",
-          code: "MB"
-        }
-      ],
+          code: "TCB",
+          img: 'TCB'
+        }],
     }
   },
   components: { MoneyInfoBox },

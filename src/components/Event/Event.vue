@@ -4,19 +4,17 @@
     <div class="row container m-auto m-0 p-0 info">
       <event-form
         :link="map.boy"
-        :time="`11:30 AM 10/02/2023`"
-        :location="`Tư gia nhà trai`"
+        :location="`Tại tư gia nhà trai`"
         :img="imgs[0] && imgs[0].path"
         :isLeft="true"
-        >Lễ cưới nhà trai</event-form
+        >Nhà trai</event-form
       >
       <event-form
         :isLeft="false"
         :link="map.girl"
-        :time="`11:30 AM 10/02/2023`"
-        :location="`Tư gia nhà trai`"
+        :location="`Tại tư gia nhà gái`"
         :img="imgs[0] && imgs[1].path"
-        >Lễ cưới nhà gái</event-form
+        >Nhà gái</event-form
       >
     </div>
   </div>
@@ -35,14 +33,14 @@ export default {
     return {
       imgs: [],
       map: {
-        boy: 'https://www.google.com/maps/place/Thanh+L%E1%BB%8Bch/@20.4707379,106.4301141,17z/data=!4m6!3m5!1s0x3135fa19ba3228a9:0x3bf1c212989a3f2b!8m2!3d20.4695103!4d106.4307038!16s%2Fg%2F11gmxm1bl0?hl=vi-VN',
-        girl: 'https://www.google.com/maps/@21.3576847,105.3089581,19.37z?hl=vi-VN'
+        boy: 'https://goo.gl/maps/1LQTvhBKNw88uasr8',
+        girl: 'https://goo.gl/maps/LcsPddaKXyU4JsTs7'
       }
     }
   },
 
   mounted () {
-    this.loadImg(require.context('../../assets/images/event', true, /\.jpeg/))
+    this.loadImg(require.context('../../assets/images/event', true, /\.jpg/))
   },
 
   methods: {

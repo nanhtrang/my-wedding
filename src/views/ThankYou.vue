@@ -2,7 +2,7 @@
   <div class="thank-you-page">
     <div class="row w-75">
       <div v-if="true" class="col-sm-6 ">
-        <img src="../assets/images/album/4.jpg" class="img">
+        <img src="../assets/images/thanks/thanks.jpeg" class="img">
       </div>
       <div class="d-flex justify-content-center align-items-center col-sm-6">
         <div class="thank font-dancing-script animation-fade-in-right">Thank</div>

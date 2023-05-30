@@ -5,7 +5,7 @@
       Ngọc
     </div>
     <div class="animation-fade-in-up delay-06">
-      <span class="just-married">Just Married</span>
+      <span class="just-married">Save The Date</span>
     </div>
   </div>
 </template>

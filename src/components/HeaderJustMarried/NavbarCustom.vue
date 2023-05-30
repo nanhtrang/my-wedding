@@ -4,7 +4,7 @@
       <a href="#calendar" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-10">Thời gian</div></a>
       <a href="#bandg" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-10">Cặp đôi</div></a>
       <a href="#album" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-12">Album ảnh</div></a>
-      <a href="#event" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-13">Sự kiện</div></a>
+<!--      <a href="#event" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-13">Sự kiện</div></a>-->
       <a href="#happy" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-14">Lời chúc</div></a>
       <a href="javascript:;" @click="sendMoney" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-15">Mừng cưới</div></a>
     </div>
@@ -20,7 +20,7 @@
         <a href="#calendar" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-10">Thời gian</div></a>
         <a href="#bandg" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-10">Cặp đôi</div></a>
         <a href="#album" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-12">Album ảnh</div></a>
-        <a href="#event" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-13">Sự kiện</div></a>
+<!--        <a href="#event" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-13">Sự kiện</div></a>-->
         <a href="#happy" @click="trigger" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-14">Lời chúc</div></a>
         <a href="javascript:;" @click="sendMoney" class="px-3 py-2 c-pointer nav-item"><div class="animation-fade-in-right delay-15">Mừng cưới</div></a>
       </div>
@@ -73,5 +73,11 @@ export default {
   top: -3px;
   left: 50px;
   font-size: 30px;
+}
+
+@media (max-width: 800px) {
+  .logo {
+    display: none;
+  }
 }
 </style>

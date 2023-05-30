@@ -39,7 +39,7 @@ export default {
         resolve(res)
       }, err => {
         reject(err)
-      })
+      }, false, true)
     })
   },
   login: function (body) {

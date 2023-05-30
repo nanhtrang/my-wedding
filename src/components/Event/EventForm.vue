@@ -7,7 +7,7 @@
       </div>
       <div class="form-container1 pb-3">
         <img class="img lazy" :data-src="img" width="230" height="230" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1500" />
-        <div class="event-time" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1700">{{ time }}</div>
+<!--        <div class="event-time" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1700">{{ time }}</div>-->
         <div class="event-location" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="1900">{{ location }}</div>
         <button-82 @onClick="gotoMap()" :data-aos="`${isLeft ? 'fade-right' : 'fade-left'}`" data-aos-duration="2100">Xem bản đồ</button-82>
       </div>
@@ -79,14 +79,19 @@ export default {
 }
 .img {
   object-fit: cover;
-  margin: 20px 0 40px;
+  margin: 20px 0 10px;
   width: 230px;
   height: 230px;
   max-width: 90%;
 }
 .img:nth-child(1) {
-  object-position: 50;
+  object-position: 50% 20%;
 }
+
+/*.img:nth-child(2) {*/
+/*  object-position: 50% 20%;*/
+/*  transform: scale(1.6);*/
+/*}*/
 .event-time {
   font-family: "Comfortaa", cursive;
   font-weight: bold;
@@ -96,5 +101,9 @@ export default {
   color: #444;
   margin-block: 10px;
   font-size: 20px;
+}
+
+.form-container1 {
+  overflow: hidden;
 }
 </style>

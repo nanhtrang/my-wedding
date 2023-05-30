@@ -2,7 +2,7 @@
   <div class="image-album-container container px-4 pt-5 border-bottom" id="album">
     <header-title
       title="Album ảnh"
-      subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam soluta beatae libero similique eius neque aliquid magni dignissimos fugiat assumenda veritatis sit, quia hic sunt quas optio iure quod voluptatum?"
+      subTitle="Có những khoảnh khắc chúng ta mãi ghi nhớ như cột mốc trong đời. Đó là ngày hôm nay khi anh trao chiếc nhẫn cho em trước mặt mọi người."
     ></header-title>
     <ul>
       <!-- <li v-for="n in 12" :key="n">{{ `../../assets/images/album/${n}.png` }}</li> -->

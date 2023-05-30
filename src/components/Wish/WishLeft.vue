@@ -46,6 +46,8 @@ export default {
       }
       this.$store.dispatch(actionTypes.ADD_WISH, body).then(res => {
         vm.$emit('updateList', res.data.list)
+        vm.name = ''
+        vm.wish = ''
       })
     }
   }

@@ -19,7 +19,7 @@
         <div class=" col-sm-6 m-0 mx-auto p-0">
           <div class="row m-0 p-0">
             <div class="col-sm-6">
-              <div class="text-start">Lọc danh sách theo</div>
+              <div class="text-start">Lọc theo</div>
               <div>
                 <select v-model="option" class="form-select">
                   <option value="0">Tất cả</option>

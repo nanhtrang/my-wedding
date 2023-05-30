@@ -3,7 +3,6 @@
     <div class="titles p-3">
       <slot></slot>
     </div>
-<!--    {{bankList}}-->
     <div class="bank-logo d-inline-flex overflow-x-auto">
       <div @click="changeBank(index)"
            :class="`bank-logo-item border rounded ${activeBankIndex === index ? 'border-custom' : ''} `"
@@ -11,8 +10,7 @@
         <img :src="item.bankLogoUrl" width="50">
       </div>
     </div>
-    <div class="img">
-      <img :src="qrs[0] && qrs[0].path">
+    <div :class="`img ${bankList[activeBankIndex] && bankList[activeBankIndex].qr}`">
     </div>
     <div class="info-text text-left px-4 pb-4">
       <div>Ngân hàng: <b>{{getBankName()}}</b></div>
@@ -30,11 +28,13 @@ export default {
   name: 'MoneyInfoBox',
   props: {
     infoBanks: null,
-    name: null
+    name: null,
+    gender: null
   },
   mounted () {
+    const vm = this
+
     this.allBanks = Object.assign({}, bankData);
-    this.importAll(require.context('../../assets/images/sendMoney/demoQr', true, /\.png/))
     this.getListBank()
   },
   data: function() {
@@ -42,17 +42,11 @@ export default {
       qrs: [],
       bankList: [],
       allBanks: null,
-      activeBankIndex: 0
+      activeBankIndex: 0,
+      ext: null
     }
   },
   methods: {
-    importAll: function (r) {
-      const vm = this
-      r.keys().forEach(key => {
-        const item = { path: r(key), name: key.replace('./', '') }
-        vm.qrs.push(item)
-      })
-    },
     changeBank: function (index) {
       this.activeBankIndex = index
     },
@@ -64,7 +58,7 @@ export default {
       vm.bankList = []
       for (const el of this.infoBanks) {
         let bank = vm.getBankByCode(el.code)
-        bank = {...bank, number: el.number}
+        bank = {...bank, number: el.number, qr: this.gender + '-' + el.img.toLowerCase()}
         vm.bankList.push(bank)
       }
 
@@ -124,5 +118,34 @@ export default {
 
 .bank-logo {
   cursor: pointer;
+}
+
+
+.boy-tcb {
+  background-image: url("../../../public/static/imgs/sendMoney/boy/TCB.jpg");
+  background-position: center;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
+
+.boy-tpb {
+  background-image: url("../../../public/static/imgs/sendMoney/boy/TPB.jpg");
+  background-position: center;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
+
+
+.girl-tcb {
+  background-image: url("../../../public/static/imgs/sendMoney/girl/TCB.jpeg");
+  background-position: center;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
+.img {
+  margin: 10px auto;
 }
 </style>

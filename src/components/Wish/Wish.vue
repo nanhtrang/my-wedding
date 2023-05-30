@@ -2,7 +2,7 @@
   <div id="happy">
     <header-title
       title="Sổ lưu bút"
-      subTitle="Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của chúng tôi!"
+      subTitle="Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của chúng mình!"
     ></header-title>
     <div class="container row m-auto">
       <div class="col-lg-6 mt-2">

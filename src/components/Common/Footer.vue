@@ -21,7 +21,7 @@ export default {
     }
   },
   mounted () {
-    this.loadImg(require.context('../../assets/images/footer', true, /\.png/))
+    this.loadImg(require.context('../../assets/images/thanks', true, /\.jpeg/))
   },
   methods: {
     loadImg: function (r) {
@@ -42,12 +42,14 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 80px;
 }
 .img {
   width: 100%;
+  transform: translateY(50px);
   -webkit-mask-image: url('../../assets/images/footer/mask.png');
-  -webkit-mask-size: 100%;
-  -webkit-mask-position: center;
+  -webkit-mask-size: 140%;
+  -webkit-mask-position: 50% 10%;
   -webkit-mask-repeat: no-repeat;
 }
 .font-dancing-script {

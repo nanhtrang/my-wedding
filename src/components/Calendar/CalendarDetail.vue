@@ -159,8 +159,8 @@ ul {
 .active-date {
   min-height: 40px;
   min-width: 40px;
-  border: 2px solid #e8c4c3;
-  color: #c76b87;
+  border: 2px solid #cc446e;
+  color: #cc446e;
   display: flex;
   align-items: center;
   justify-content: center;

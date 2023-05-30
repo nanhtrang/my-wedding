@@ -3,8 +3,8 @@
     <div class="bg-side bg-left"></div>
     <div class="bg-side bg-right"></div>
     <header-title
-      title="Thời gian"
-      subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam soluta beatae libero similique eius neque aliquid magni dignissimos fugiat assumenda veritatis sit, quia hic sunt quas optio iure quod voluptatum?"
+      title="Thời gian tổ chức lễ cưới"
+      subTitle="Trở thành cô dâu xinh đẹp rạng ngời luôn là điều mọi cô gái ao ước. Hôm nay điều ước của em đã trở thành sự thật"
     ></header-title>
     <div class="container">
       <div class="row m-0 p-0">
@@ -125,6 +125,12 @@ export default {
   background-repeat: no-repeat;
   position: absolute;
   z-index: 10;
+}
+
+@media (max-width: 472px) {
+  .box-container {
+    padding: 20px 20px;
+  }
 }
 
 </style>
