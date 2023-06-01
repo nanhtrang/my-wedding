@@ -2,6 +2,7 @@ import Library from 'axios'
 import Store from '../store/index'
 import actionTypes from '@/store/types/actionTypes'
 
+console.log(process.env.VUE_APP_HOST)
 const http = Library.create({
   baseURL: process.env.VUE_APP_HOST
 })

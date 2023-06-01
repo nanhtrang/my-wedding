@@ -20,7 +20,6 @@ export default {
   methods: {
     deleteThis: function (id) {
       this.$store.dispatch(actionTypes.DELETE_WISH, {id}).then(res => {
-        console.log(res)
       })
     }
   }

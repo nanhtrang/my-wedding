@@ -124,7 +124,6 @@ export default {
       })
     },
     openLoading () {
-      console.log("loggingg")
       const lazyloadImages = document.getElementsByClassName('lazy')
       let lazyloadThrottleTimeout
       function lazyload () {
@@ -133,10 +132,8 @@ export default {
         }
         lazyloadThrottleTimeout = setTimeout(function () {
           const scrollTop = window.pageYOffset
-          console.log(lazyloadImages)
           for (const img of lazyloadImages) {
             if (img.offsetTop < (window.innerHeight + scrollTop)) {
-              console.log("layzee")
               img.src = img.dataset.src
               img.classList.remove('lazy')
             }
