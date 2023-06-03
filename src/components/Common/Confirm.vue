@@ -8,7 +8,7 @@
         Vui lòng xác nhận giúp vợ chồng mình để có một sự chuẩn bị tốt nhất nhé!!!</div>
       <div class="d-inline-flex align-items-center justify-content-start col-sm-5 animation-fade-in-up delay-12">
         <input placeholder="Họ và tên bạn" v-model="name"> &nbsp;
-        <input placeholder="Bạn đi mấy người" v-model="number" type="number" maxlength="1">
+        <input placeholder="Bạn đi mấy người" v-model="number" type="number" maxlength="1" @keydown="keydown">
       </div>
       <div class="col-sm-3 d-inline-flex mt-2 animation-fade-in-up delay-14">
         <button-82 @onClick="sendConfirm">
@@ -53,6 +53,20 @@ export default {
     'button-82': Button82
   },
   methods: {
+    keydown: function (e) {
+      const codes = [
+        'Backspace',
+        'Delete'
+      ]
+      if (e.key === 'e') {
+        e.preventDefault()
+      }
+      if (this.number && this.number.length === 1) {
+        if (!codes.includes(e.code) ) {
+          e.preventDefault()
+        }
+      }
+    },
     sendConfirm: function () {
       let addition = ''
       if (this.$route.fullPath === 'toan-ngoc') {

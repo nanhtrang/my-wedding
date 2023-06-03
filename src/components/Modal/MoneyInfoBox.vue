@@ -122,7 +122,7 @@ export default {
 
 
 .boy-tcb {
-  background-image: url("../../../public/static/imgs/sendMoney/boy/TCB.jpg");
+  background-image: url("../../assets/images/sendMoney/boy/TCB.jpg");
   background-position: center;
   background-size: contain;
   width: 200px;
@@ -130,7 +130,7 @@ export default {
 }
 
 .boy-tpb {
-  background-image: url("../../../public/static/imgs/sendMoney/boy/TPB.jpg");
+  background-image: url("../../assets/images/sendMoney/boy/TPB.jpg");
   background-position: center;
   background-size: contain;
   width: 200px;
@@ -139,7 +139,7 @@ export default {
 
 
 .girl-tcb {
-  background-image: url("../../../public/static/imgs/sendMoney/girl/TCB.jpeg");
+  background-image: url("../../assets/images/sendMoney/girl/TCB.jpeg");
   background-position: center;
   background-size: contain;
   width: 200px;

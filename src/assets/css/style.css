@@ -16,7 +16,7 @@ html {
 }
 
 .img-title {
-  background-image: url('../../static/imgs/sec-title-flower.png');
+  background-image: url('../images/sec-title-flower.png');
   height: 70px;
   background-repeat: no-repeat;
   background-position: center;

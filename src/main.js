@@ -5,6 +5,7 @@ import router from './router'
 import store from './store'
 import 'vuesax/dist/vuesax.css'
 import VueCookies from 'vue-cookies'
+import './assets/css/style.css'
 
 Vue.use(Vuesax, {})
 Vue.config.productionTip = false
