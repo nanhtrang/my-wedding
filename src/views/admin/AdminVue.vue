@@ -209,7 +209,7 @@ export default {
     },
     logout: function() {
       this.$cookies.remove('account')
-      this.$router.push('/login')
+      this.$router.push('/my-login')
     },
     getWish: function () {
       const vm = this

@@ -6,7 +6,7 @@
       </div>
       <div class="d-flex justify-content-center align-items-center col-sm-6">
         <div class="thank font-dancing-script animation-box animation-box-secondary">Thank</div>
-        <div class="you font-dancing-script animation-box">&nbsp;you!</div>
+        <div class="you font-dancing-script animation-box" @click="changeRouter">&nbsp;you!</div>
       </div>
     </div>
   </div>
@@ -30,6 +30,9 @@ export default {
         const item = { path: r(key), name: key.replace('./', '') }
         vm.imgs.push(item)
       })
+    },
+    changeRouter: function () {
+      this.$router.push('/my-admin')
     }
   }
 }
