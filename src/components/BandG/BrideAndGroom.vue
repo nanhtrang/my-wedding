@@ -2,7 +2,7 @@
   <div class="container-bandg container px-5" id="bandg">
     <header-title
       title="Cô dâu & Chú rể"
-      subTitle="Mong một ngày, anh là chủ rể, em là cô dâu"
+      subTitle="Mong một ngày, anh là chú rể, em là cô dâu"
     ></header-title>
     <div class="row">
       <div class="col-sm-12 col-md-6 bg-bg  animation-box animation-box-secondary">

@@ -14,9 +14,10 @@
             <div class="box h-100">
               <h2 class="title my-2" data-aos="zoom-out" data-aos-duration="1400">Save the Date</h2>
               <div class="for-the-wedding my-1 mt-3">For the wedding of</div>
-              <div class="font-dancing-script" data-aos="zoom-out" data-aos-duration="1600">
-                Đức Toàn <span class="material-symbols-outlined icon-heart"> favorite </span> Như
-                Ngọc
+              <div class="font-dancing-script row m-0 p-0" data-aos="zoom-out" data-aos-duration="1600">
+                <div class="font-dancing-script text-end col-sm-5 m-0 p-0">Đức Toàn</div>
+                <span class="col-sm-2 m-0 p-0 material-symbols-outlined icon-heart d-flex align-items-center justify-content-center" style="font-size: 30px"> favorite </span>
+                <div class="font-dancing-script text-start  col-sm-5 m-0 p-0">Như Ngọc</div>
               </div>
               <div class="intro my-3" data-aos="zoom-out" data-aos-duration="1800">
                 Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng tôi
@@ -130,6 +131,12 @@ export default {
 @media (max-width: 472px) {
   .box-container {
     padding: 20px 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .text-end, .text-start {
+    text-align: center!important;
   }
 }
 

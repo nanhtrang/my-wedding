@@ -55,7 +55,8 @@ export default {
   methods: {
     sendConfirm: function () {
       let addition = ''
-      if (this.$route.fullPath === 'toan-ngoc') {
+      debugger
+      if (this.$route.fullPath.includes('toan-ngoc')) {
         addition = true
       } else {
         addition = false
