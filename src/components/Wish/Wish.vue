@@ -5,10 +5,13 @@
       subTitle="Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của chúng mình!"
     ></header-title>
     <div class="container row m-auto">
-      <div class="col-lg-6 mt-2">
+      <!-- <div class="col-lg-6 mt-2">
         <wish-left @updateList="updateList"></wish-left>
       </div>
       <div class="col-lg-6 mt-2">
+        <wish-right :data="getUpdateList"></wish-right>
+      </div> -->
+      <div class="col-lg-6 m-auto mt-2">
         <wish-right :data="getUpdateList"></wish-right>
       </div>
     </div>
@@ -17,12 +20,12 @@
 
 <script>
 import HeaderTitle from '../Common/HeaderTitle.vue'
-import WishLeft from '@/components/Wish/WishLeft'
+// import WishLeft from '@/components/Wish/WishLeft'
 import WishRight from '@/components/Wish/WishRight'
 import actionTypes from '@/store/types/actionTypes'
 export default {
   components: { HeaderTitle,
-    'wish-left': WishLeft,
+    // 'wish-left': WishLeft,
     WishRight
   },
   name: 'ToanNgocWeddingWish',
@@ -33,7 +36,7 @@ export default {
   },
 
   mounted () {
-    this.getWish()
+    // this.getWish()
   },
 
   methods: {

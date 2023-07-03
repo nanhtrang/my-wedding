@@ -45,7 +45,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
 }
 .img {
   width: 100%;

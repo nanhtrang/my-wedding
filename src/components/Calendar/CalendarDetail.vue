@@ -36,7 +36,7 @@
       </div>
 
       <div class="countdown-box animation-box delay-23">
-        <div id="demo" class="d-flex justify-content-center align-items-center pt-3 w-100">
+        <div id="demo" class="d-flex justify-content-center align-items-center pt-3 w-100 timer">
           <div class="timer" data-aos="zoom-out-up" data-aos-duration="1000">
             <div>{{date}}</div>
             <div>Ngày</div>

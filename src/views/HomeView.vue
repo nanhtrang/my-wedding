@@ -21,7 +21,7 @@
 <!--    <event-vue></event-vue>-->
     <wish-vue></wish-vue>
     <footer-vue></footer-vue>
-    <confirm-vue></confirm-vue>
+    <!-- <confirm-vue></confirm-vue> -->
     <send-money></send-money>
   </div>
 </template>
@@ -36,7 +36,7 @@ import BrideAndGroomVue from '@/components/BandG/BrideAndGroom.vue'
 import ImageAlbum from '@/components/Album/ImageAlbum.vue'
 import WishVue from '@/components/Wish/Wish.vue'
 import FooterVue from '@/components/Common/Footer'
-import Confirm from '@/components/Common/Confirm'
+// import Confirm from '@/components/Common/Confirm'
 import SendMoney from '@/components/Modal/SendMoney'
 import LoadingCustom from '@/components/Common/LoadingCustom'
 import actionTypes from '@/store/types/actionTypes'
@@ -58,7 +58,7 @@ export default {
     'image-album': ImageAlbum,
     'wish-vue': WishVue,
     'footer-vue': FooterVue,
-    'confirm-vue': Confirm
+    // 'confirm-vue': Confirm
   },
   data: function () {
     return {
@@ -161,7 +161,7 @@ export default {
 </script>
 <style scoped>
 .home-container {
-  padding-bottom: 80px;
+  /* padding-bottom: 20px; */
   overflow-y: hidden;
   overflow-x: hidden;
 }
