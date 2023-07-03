@@ -10,14 +10,14 @@ import SideVue from '@/views/SideVue'
 Vue.use(VueRouter)
 
 const routes = [
+  // {
+  //   path: '/',
+  //   name: 'friendOfSide',
+  //   component: SideVue
+  // },
   {
     path: '/',
-    name: 'friendOfSide',
-    component: SideVue
-  },
-  {
-    path: '/ngoc-toan',
-    alias: ['/toan-ngoc'],
+    alias: ['/toan-ngoc', '/ngoc-toan'],
     name: 'home',
     component: HomeView
   },
