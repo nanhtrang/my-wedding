@@ -6,7 +6,7 @@
       </div>
       <div class="d-flex justify-content-center align-items-center col-sm-6">
         <div class="thank font-dancing-script animation-fade-in-right">Thank</div>
-        <div class="you font-dancing-script animation-fade-in-left">&nbsp;you!</div>
+        <div class="you font-dancing-script animation-fade-in-left" @click="changeRouter">&nbsp;you!</div>
       </div>
     </div>
   </div>
@@ -14,7 +14,12 @@
 
 <script>
 export default {
-  name: 'ThankYou'
+  name: 'ThankYou',
+  methods: {
+    changeRouter: function () {
+      this.$router.push('/my-admin')
+    }
+  }
 }
 </script>
 

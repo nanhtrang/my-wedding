@@ -32,12 +32,12 @@ const routes = [
     component: ThankYou
   },
   {
-    path: '/login',
+    path: '/my-login',
     name: 'Login',
     component: Login
   },
   {
-    path: '/admin',
+    path: '/my-admin',
     name: 'Admin',
     component: AdminVue
   }
@@ -50,13 +50,13 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.fullPath.includes('admin')) {
+  if (to.fullPath.includes('my-admin')) {
     const accounts = ['ductoan110397', 'nhungoc121197']
     if (!accounts.includes(window.$cookies.get('account'))) {
-      return next('/login')
+      return next('/my-login')
     }
   }
-  if (to.fullPath.includes('login')) {
+  if (to.fullPath.includes('my-login')) {
     window.$cookies.remove('account')
   }
   return next()

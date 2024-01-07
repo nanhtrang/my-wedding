@@ -2,7 +2,7 @@
   <div class="h-100 w-100" style="min-height: 100vh; position: relative">
     <div class="box">
       <h3>Bạn là bạn của cô dâu hay chú rể?</h3>
-      <toan-ngoc-wedding-button82 class="mx-2" @onClick="routerChange('/ngoc-toan')">Cô dâu</toan-ngoc-wedding-button82>
+      <toan-ngoc-wedding-button82 class="mx-2 mb-3" @onClick="routerChange('/ngoc-toan')">Cô dâu</toan-ngoc-wedding-button82>
       <toan-ngoc-wedding-button82 class="mx-2" @onClick="routerChange('/toan-ngoc')">Chú rể</toan-ngoc-wedding-button82>
     </div>
 

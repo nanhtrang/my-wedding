@@ -59,7 +59,7 @@ export default {
       api.login(body).then(res => {
         if (res.status === 'success') {
           vm.$cookies.set('account', res.data.username)
-          vm.$router.push('/admin')
+          vm.$router.push('/my-admin')
         }
       })
     }
